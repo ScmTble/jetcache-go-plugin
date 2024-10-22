@@ -59,7 +59,7 @@ func OTelWithMeterProvider(mp metric.MeterProvider) OpenTelemetryOption {
 
 func NewOpenTelemetry(cacheName string, opts ...OpenTelemetryOption) (*OpenTelemetry, error) {
 	o := OpenTelemetryOptions{
-		name: "cache_handle_total",
+		name: "jetcache_handle_total",
 		mp:   otel.GetMeterProvider(),
 	}
 	for _, opt := range opts {
